@@ -1,0 +1,33 @@
+﻿APP Design:
+
+1.  Take  Birthday,input from the user in format dd-mm-yyyy.
+2. Date and Month of the Birthday is significant for the notification. Save the input in date format.
+3. Using Datetime Module
+        3.1 Fetch current date and day.
+        3.2 Fetch day and month from the input birthday.
+4. Notification Message:
+        4.1 If the current month is same as birthday month : Calculate the days.
+                     4.1.1   If the difference between Birthday and Current date is Positive : Print ‘Number     		        of  days’ from now.
+                     4.1.2   If the difference between Birthday and Current date is Negative : Print ‘Number     		        of  days’ Ago.
+
+        4.2 If the current month and  birthday month are different : Calculate the month
+                     4.2.1   If the difference between Birthday month and Current Month is Positive : Print 		        ‘Number of  months’ from now.
+ 	         4.2.2   If the difference between Birthday month and Current month is Negative : Print  		        ‘Number of months’ Ago.
+
+5.  Print Current date, day and notification according to The current date Along the day and month of the birthday(Input, which is fixed).
+
+
+Test cases:
+ 
+1. Othet than current date give the test case dates.
+2. This Month  :  All dates of the birthday month.(Boundary values and nearby dates are important).
+3. Birthday : Test case on the same day as birthday. 
+3. Easy Test cases : Some dates from different months (January to December)
+4. Previous Month : Test cases for next month of the given birthday month.
+
+
+Functions:
+
+1. Current_Date(): To fetch and return the current date and day using Datetime Module.
+2. Birthday():  To fetch and return on which day and month the birtday is with respect to current year, using datetime module.
+3. Notification(): takes current date and birthday date as parameters , based on the operation returns the message.
