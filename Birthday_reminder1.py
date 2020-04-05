@@ -1,14 +1,14 @@
 import datetime
 
 def Current_Date():
-	print("Inside Current")
+	#print("Inside Current")
 	Today=datetime.date.today()  #To get current date and day
 	Today_day=Today.strftime("%A")
 	return Today,Today_day
 
 
 def Birthday(date):
-	print("Inside Birthday")
+	#print("Inside Birthday")
 	#date=input("Input Your Birth date in dd-mm-yy format: ")
 	date_l=date.split("-")
 	d1=datetime.date(int(2020),int(date_l[1]),int(date_l[0]))
@@ -17,12 +17,8 @@ def Birthday(date):
 
 
 def Notification(c,b):
-	print("Inside Notify")
-	#Current_Info=Current_Date()
-	#date=input("Input Your Birth date in dd-mm-yy format: ")
-	#Birthday_info=Birthday(date)
-	#c=Current_Info[0]
-	#b=Birthday_info[0]
+	#print("Inside Notify")
+	
 	if(c.month == b.month):
 		return ( "In same month")
 
@@ -34,7 +30,7 @@ def Notification(c,b):
 
 
 def Display_Notifications(date):
-	print("Inside Display")
+	#print("Inside Display")
 	Current_Info=Current_Date()
 	
 	Birthday_info=Birthday(date)
@@ -43,16 +39,11 @@ def Display_Notifications(date):
 
 
 
+# input is taken from the user only this file is run directly	
 if __name__ =="__main__" :
 	date=input("Input Your Birth date in dd-mm-yy format: ")
 	dsn=Display_Notifications(date)
 
 
-#Current_Info=Current_Date()
-#Birthday_info=Birthday()
-#print("Date"+" || ","Day"+" || "+"Detail")
-#print(Current_Info," || ",Birthday_info[1])
-#notes=Notification(Current_Info[0],Birthday_info[0])
-#notes=Notification()
-#print(Current_Info," || ",Birthday_info[1]," || ",notes)
+
 
