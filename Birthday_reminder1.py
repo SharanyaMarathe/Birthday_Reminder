@@ -16,32 +16,36 @@ def Birthday(date):
 	return d1,p
 
 
-class Notification():
+def Notification(c,b):
 	print("Inside Notify")
-	Current_Info=Current_Date()
-	date=input("Input Your Birth date in dd-mm-yy format: ")
-	Birthday_info=Birthday(date)
-	c=Current_Info[0]
-	b=Birthday_info[0]
+	#Current_Info=Current_Date()
+	#date=input("Input Your Birth date in dd-mm-yy format: ")
+	#Birthday_info=Birthday(date)
+	#c=Current_Info[0]
+	#b=Birthday_info[0]
 	if(c.month == b.month):
-		result= "In same month"
+		return ( "In same month")
 
 	elif((b.month - c.month) > 0):
-		result= str(b.month - c.month)+"Months from now"
+		return  (str(b.month - c.month)+"Months from now")
 
 	else: 
-		result= str(c.month - b.month) +"Months Ago"
+		return (str(c.month - b.month) +"Months Ago")
 
 
-class Display_Notifications(Notification):
+def Display_Notifications(date):
 	print("Inside Display")
-	notes=Notification()
-	print(str(notes.Current_Info)," || ",notes.Birthday_info[1]," || ",notes.result)
+	Current_Info=Current_Date()
+	
+	Birthday_info=Birthday(date)
+	notes=Notification(Current_Info[0],Birthday_info[0])
+	print(str(Current_Info)," || ",Birthday_info[1]," || ",notes)
 
 
 
-
-dsn=Display_Notifications()
+if __name__ =="__main__" :
+	date=input("Input Your Birth date in dd-mm-yy format: ")
+	dsn=Display_Notifications(date)
 
 
 #Current_Info=Current_Date()
